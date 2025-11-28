@@ -198,6 +198,20 @@ i.fa.fa-lock {
     float: left;
 	width:50%;
 }
+
+/* --- Minimal UI: disable all CSS animations/transitions globally --- */
+*,
+*::before,
+*::after {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    animation: none !important;
+}
 .bnr-left {
     float: left;
 	width:50%;

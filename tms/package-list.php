@@ -19,20 +19,14 @@ include('includes/config.php');
 <!-- Custom Theme files -->
 <script src="js/jquery-1.12.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<!--animate-->
-<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-<script src="js/wow.min.js"></script>
-	<script>
-		 new WOW().init();
-	</script>
-<!--//end-animate-->
+<!-- animations removed for minimal UI -->
 </head>
 <body>
 <?php include('includes/header.php');?>
 <!--- banner ---->
 <div class="banner-3">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS- Package List</h1>
+	<h1> TMS- Package List</h1>
 	</div>
 </div>
 <!--- /banner ---->
@@ -54,17 +48,17 @@ if($query->rowCount() > 0)
 foreach($results as $result)
 {	?>
 			<div class="rom-btm">
-				<div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
+				<div class="col-md-3 room-left">
 					<img src="admin/pacakgeimages/<?php echo htmlentities($result->PackageImage);?>" class="img-responsive" alt="">
 				</div>
-				<div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
+				<div class="col-md-6 room-midle">
 					<h4>Package Name: <?php echo htmlentities($result->PackageName);?></h4>
 					<h6>Package Type : <?php echo htmlentities($result->PackageType);?></h6>
 					<p><b>Package Location :</b> <?php echo htmlentities($result->PackageLocation);?></p>
 					<p><b>Features</b> <?php echo htmlentities($result->PackageFetures);?></p>
 				</div>
-				<div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
-					<h5>USD <?php echo htmlentities($result->PackagePrice);?></h5>
+				<div class="col-md-3 room-right">
+					<h5>₹ <?php echo htmlentities($result->PackagePrice);?></h5>
 					<a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId);?>" class="view">Details</a>
 				</div>
 				<div class="clearfix"></div>

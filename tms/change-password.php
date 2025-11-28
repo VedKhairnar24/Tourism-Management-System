@@ -50,12 +50,7 @@ $error="Your current password is wrong";
 <!-- Custom Theme files -->
 <script src="js/jquery-1.12.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<!--animate-->
-<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-<script src="js/wow.min.js"></script>
-	<script>
-		 new WOW().init();
-	</script>
+<!-- animations removed for minimal UI -->
 	<script type="text/javascript">
 function valid()
 {
@@ -93,14 +88,14 @@ return true;
 <?php include('includes/header.php');?>
 <div class="banner-1 ">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">TMS-Tourism Management System</h1>
+	<h1>TMS-Tourism Management System</h1>
 	</div>
 </div>
 <!--- /banner-1 ---->
 <!--- privacy ---->
 <div class="privacy">
 	<div class="container">
-		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Change Password</h3>
+	<h3>Change Password</h3>
 		<form name="chngpwd" method="post" onSubmit="return valid();">
 		 <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>

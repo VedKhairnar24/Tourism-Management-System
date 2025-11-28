@@ -21,22 +21,16 @@ include('includes/config.php');
 <!-- Custom Theme files -->
 <script src="js/jquery-1.12.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<!--animate-->
-<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-<script src="js/wow.min.js"></script>
-	<script>
-		 new WOW().init();
-	</script>
-<!--//end-animate-->
+<!-- animations removed for minimal UI -->
 </head>
 <body>
 <?php include('includes/header.php');?>
 <div class="banner">
 	<div class="container">
 		<div class="banner-text">
-			<h1 class="wow zoomIn animated" data-wow-delay=".5s">Discover Your Dream Destination</h1>
-			<p class="wow fadeInUp animated" data-wow-delay=".7s">Explore the world's most beautiful places with our curated travel packages</p>
-			<a href="package-list.php" class="btn btn-primary btn-lg wow fadeInUp animated" data-wow-delay=".9s">Explore Packages</a>
+			<h1>Discover Your Dream Destination</h1>
+			<p>Discover breathtaking destinations like Santorini’s sunsets, Iguazú Falls’ misty cascades, or Cappadocia’s fairy-tale landscapes with our tailored travel packages. Designed for luxury and adventure, each itinerary offers exclusive experiences, from private boat tours to guided treks, ensuring unforgettable memories. Let us handle every detail for a seamless, sustainable journey to the planet’s most stunning locales.</p>
+			<a href="package-list.php" class="btn btn-primary btn-lg">Explore Packages</a>
 		</div>
 	</div>
 </div>
@@ -44,9 +38,9 @@ include('includes/config.php');
 <!-- Featured Destinations -->
 <div class="featured-destinations">
 	<div class="container">
-		<h2 class="text-center wow fadeInUp animated" data-wow-delay=".3s">Featured Destinations</h2>
+	<h2 class="text-center">Featured Destinations</h2>
 		<div class="row">
-			<div class="col-md-4 wow fadeInUp animated" data-wow-delay=".4s">
+			<div class="col-md-4">
 				<div class="destination-card">
 					<img src="images/h1.jpg" alt="Beach Paradise" class="img-responsive">
 					<div class="destination-info">
@@ -55,7 +49,7 @@ include('includes/config.php');
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 wow fadeInUp animated" data-wow-delay=".5s">
+			<div class="col-md-4">
 				<div class="destination-card">
 					<img src="images/h2.jpg" alt="Mountain Adventure" class="img-responsive">
 					<div class="destination-info">
@@ -64,7 +58,7 @@ include('includes/config.php');
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 wow fadeInUp animated" data-wow-delay=".6s">
+			<div class="col-md-4">
 				<div class="destination-card">
 					<img src="images/h3.jpg" alt="Cultural Heritage" class="img-responsive">
 					<div class="destination-info">
@@ -80,7 +74,7 @@ include('includes/config.php');
 <!---holiday---->
 <div class="container">
 	<div class="holiday">
-		<h3 class="text-center wow fadeInUp animated" data-wow-delay=".3s">Popular Tour Packages</h3>
+	<h3 class="text-center">Popular Tour Packages</h3>
 		<div class="row">
 <?php $sql = "SELECT * from tbltourpackages order by rand() limit 4";
 $query = $dbh->prepare($sql);
@@ -92,17 +86,17 @@ if($query->rowCount() > 0)
 foreach($results as $result)
 {	?>
 			<div class="rom-btm">
-				<div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
+				<div class="col-md-3 room-left">
 					<img src="admin/pacakgeimages/<?php echo htmlentities($result->PackageImage);?>" class="img-responsive" alt="">
 				</div>
-				<div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
+				<div class="col-md-6 room-midle">
 					<h4>Package Name: <?php echo htmlentities($result->PackageName);?></h4>
 					<h6>Package Type : <?php echo htmlentities($result->PackageType);?></h6>
 					<p><b>Package Location :</b> <?php echo htmlentities($result->PackageLocation);?></p>
 					<p><b>Features</b> <?php echo htmlentities($result->PackageFetures);?></p>
 				</div>
-				<div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
-					<h5>USD <?php echo htmlentities($result->PackagePrice);?></h5>
+				<div class="col-md-3 room-right">
+					<h5>₹ <?php echo htmlentities($result->PackagePrice);?></h5>
 					<a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId);?>" class="view">Details</a>
 				</div>
 				<div class="clearfix"></div>
@@ -121,11 +115,11 @@ foreach($results as $result)
 <!--- routes ---->
 <div class="routes">
 	<div class="container">
-		<div class="col-md-4 routes-left wow fadeInRight animated" data-wow-delay=".5s">
+		<div class="col-md-4 routes-left">
 			<div class="rou-left">
 				<a href="#"><i class="glyphicon glyphicon-list-alt"></i></a>
 			</div>
-			<div class="rou-rgt wow fadeInDown animated" data-wow-delay=".5s">
+			<div class="rou-rgt">
 				<h3>80000</h3>
 				<p>Enquiries</p>
 			</div>
@@ -141,7 +135,7 @@ foreach($results as $result)
 			</div>
 				<div class="clearfix"></div>
 		</div>
-		<div class="col-md-4 routes-left wow fadeInRight animated" data-wow-delay=".5s">
+		<div class="col-md-4 routes-left">
 			<div class="rou-left">
 				<a href="#"><i class="fa fa-ticket"></i></a>
 			</div>

@@ -47,12 +47,7 @@ $error="Something went wrong. Please try again";
 <!-- Custom Theme files -->
 <script src="js/jquery-1.12.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<!--animate-->
-<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-<script src="js/wow.min.js"></script>
-	<script>
-		 new WOW().init();
-	</script>
+<!-- animations removed for minimal UI -->
   <style>
 		.errorWrap {
     padding: 10px;
@@ -78,14 +73,14 @@ $error="Something went wrong. Please try again";
 <?php include('includes/header.php');?>
 <div class="banner-1 ">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">TMS-Tourism Management System</h1>
+	<h1>TMS-Tourism Management System</h1>
 	</div>
 </div>
 <!--- /banner-1 ---->
 <!--- privacy ---->
 <div class="privacy">
 	<div class="container">
-		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Enquiry Form Password</h3>
+	<h3>Enquiry Form Password</h3>
 		<form name="enquiry" method="post">
 		 <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>

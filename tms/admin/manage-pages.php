@@ -127,7 +127,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
                   <option value="" selected="selected" class="form-control">***Select One***</option>
                   <option value="manage-pages.php?type=terms">terms and condition</option>
                   <option value="manage-pages.php?type=privacy">privacy and policy</option>
-                  <option value="manage-pages.php?type=aboutus">aboutus</option> 
+                  <option value="manage-pages.php?type=about us">about us</option> 
                   <option value="manage-pages.php?type=contact">Contact us</option>
                 </select>
 									</div>
@@ -147,7 +147,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 									echo "Privacy And Policy";
 									break;
 				
-				case "aboutus" :
+				case "about us" :
 									echo "About US";
 									break;
 				case "software" :

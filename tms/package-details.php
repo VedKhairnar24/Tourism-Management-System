@@ -47,13 +47,8 @@ $error="Something went wrong. Please try again";
 <!-- Custom Theme files -->
 <script src="js/jquery-1.12.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<!--animate-->
-<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-<script src="js/wow.min.js"></script>
+<!-- animations removed for minimal UI -->
 <link rel="stylesheet" href="css/jquery-ui.css" />
-	<script>
-		 new WOW().init();
-	</script>
 <script src="js/jquery-ui.js"></script>
 					<script>
 						$(function() {
@@ -84,7 +79,7 @@ $error="Something went wrong. Please try again";
 <?php include('includes/header.php');?>
 <div class="banner-3">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS -Package Details</h1>
+		<h1> TMS -Package Details</h1>
 	</div>
 </div>
 <!--- /banner ---->
@@ -108,10 +103,10 @@ foreach($results as $result)
 
 <form name="book" method="post">
 		<div class="selectroom_top">
-			<div class="col-md-4 selectroom_left wow fadeInLeft animated" data-wow-delay=".5s">
+			<div class="col-md-4 selectroom_left">
 				<img src="admin/pacakgeimages/<?php echo htmlentities($result->PackageImage);?>" class="img-responsive" alt="">
 			</div>
-			<div class="col-md-8 selectroom_right wow fadeInRight animated" data-wow-delay=".5s">
+			<div class="col-md-8 selectroom_right">
 				<h2><?php echo htmlentities($result->PackageName);?></h2>
 				<p class="dow">#PKG-<?php echo htmlentities($result->PackageId);?></p>
 				<p><b>Package Type :</b> <?php echo htmlentities($result->PackageType);?></p>
@@ -130,7 +125,7 @@ foreach($results as $result)
 						<div class="clearfix"></div>
 				<div class="grand">
 					<p>Grand Total</p>
-					<h3>USD.800</h3>
+					<h3>₹ 800</h3>
 				</div>
 			</div>
 		<h3>Package Details</h3>
@@ -139,7 +134,7 @@ foreach($results as $result)
 		</div>
 		<div class="selectroom_top">
 			<h2>Travels</h2>
-			<div class="selectroom-info animated wow fadeInUp animated" data-wow-duration="1200ms" data-wow-delay="500ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 500ms; animation-name: fadeInUp; margin-top: -70px">
+		<div class="selectroom-info" style="margin-top: -70px">
 				<ul>
 				
 					<li class="spe">
